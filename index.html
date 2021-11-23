@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Лабораторная 21</title>
+<meta charset="utf-8">
+<head>
+<script language="JavaScript" type="text/JavaScript">
+function hello() {
+    var id;
+    id=window.open("","example","width=400, height=150");
+    id.focus();
+    id.document.open();
+    id.document.write("<h1><form color='olive' face='Lucida Console' size='5'>Здравствуйте </form></h1>");
+    id.document.write("<input type='button' value='Закрыть окно' onclick='window.close();'> </form>");
+    id.document.close();
+}
+     (function ($) {
+            $(document).ready(function () {
+                $('#btn').click(function () {
+                    var d = new Date();
+                    $('title').text(d);
+                    window.status = d;
+                });
+            });
+        })(jQuery)
+</script>
+</head>
+<body>
+<form name="f2">
+<input type="button" onclick="hello();" value="Отправить"/><br /><br />
+<input type="button" value="Нажать"
+    onclick="window.alert('Пожалуйста, нажмите еще раз'); "><br /><br />
+</form>
+    <a href="#" onclick="alert('Задание выполнено!'); return false;">Задание 2</a>
+    <br><br>
+    <form onsubmit="alert('принято');return false">
+ <input type="text" size="30" value="Кликните на форму и нажмите Enter">
+ <input type="submit" value="Отправить" onclick="alert('вы нажали')">
+</form>
+   <input type="button" value="Date to title!" id="btn"/>
+</body>
+</html>
+
